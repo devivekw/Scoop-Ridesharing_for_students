@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/nice_button.dart';
+import 'studentInterface.dart';
 
 import 'data.dart';
 
@@ -99,7 +100,11 @@ class _StudentSignUpPageState extends State<StudentSignUpPage> {
                     Pallete.mainBlue,
                   ],
                   onPressed: () {
-                    print("object");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => StudentSelectPage()),
+                    );
                   },
                 ),
               ),

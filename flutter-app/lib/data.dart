@@ -4,6 +4,7 @@ class Pallete {
   static Color mainBlue = Color(0xFF6532ED);
   static Color white = Color(0xFFFFFFFF);
   static Color studetGreen = Color(0xFF00D8BE);
+  static Color bottomGrey = Color(0XFFF6F6F6);
 }
 
 TextStyle header = TextStyle(
@@ -34,9 +35,22 @@ TextStyle mediumText = TextStyle(
   color: Colors.black,
 );
 
+TextStyle navBarText = TextStyle(
+  fontFamily: 'Quicksand',
+  fontSize: 25.0,
+  fontWeight: FontWeight.w500,
+  //color: Colors.black,
+);
+
 TextStyle mediumGreyText = TextStyle(
     fontFamily: 'Quicksand',
     fontSize: 20.0,
+    fontWeight: FontWeight.w200,
+    color: Colors.grey);
+
+TextStyle mediumGreyDropText = TextStyle(
+    fontFamily: 'Quicksand',
+    fontSize: 25.0,
     fontWeight: FontWeight.w200,
     color: Colors.grey);
 
