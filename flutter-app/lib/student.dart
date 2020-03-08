@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/nice_button.dart';
 
-//import 'package:google_fonts/google_fonts.dart';
 import 'data.dart';
 
-class DriverSignUpPage extends StatefulWidget {
+class StudentSignUpPage extends StatefulWidget {
   @override
-  _DriverSignUpPageState createState() => _DriverSignUpPageState();
+  _StudentSignUpPageState createState() => _StudentSignUpPageState();
 }
 
-class _DriverSignUpPageState extends State<DriverSignUpPage> {
+class _StudentSignUpPageState extends State<StudentSignUpPage> {
   final nameControl = TextEditingController();
   final emailControl = TextEditingController();
   final numberControl = TextEditingController();
@@ -62,7 +61,7 @@ class _DriverSignUpPageState extends State<DriverSignUpPage> {
               Padding(
                 padding: const EdgeInsets.only(top: 10.0, bottom: 20),
                 child: Text(
-                  'Hello Driver,',
+                  'Hello Student,',
                   style: blackHeader,
                 ),
               ),
@@ -96,17 +95,11 @@ class _DriverSignUpPageState extends State<DriverSignUpPage> {
                   text: "Ready to Scoop",
                   background: null,
                   gradientColors: [
-                    Pallete.mainBlue,
                     Pallete.studetGreen,
+                    Pallete.mainBlue,
                   ],
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            DriverLicencePage(nameControl.text),
-                      ),
-                    );
+                    print("object");
                   },
                 ),
               ),
@@ -116,89 +109,6 @@ class _DriverSignUpPageState extends State<DriverSignUpPage> {
                   "By submitting you agree to our terms and conditions",
                   textAlign: TextAlign.center,
                   style: madSmallText,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class DriverLicencePage extends StatelessWidget {
-  DriverLicencePage(this.name);
-  final String name;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0, bottom: 20),
-                child: Text(
-                  this.name,
-                  style: mediumBlack,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 30),
-                child: Text(
-                  'We need to verify your information',
-                  style: mediumGreyText,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: NiceButton(
-                  padding: EdgeInsets.symmetric(vertical: 15),
-                  width: 350,
-                  elevation: 8.0,
-                  radius: 24,
-                  icon: (Icons.camera_alt),
-                  text: "Your Drivers Licence",
-                  background: Pallete.mainBlue,
-                  onPressed: () {
-                    print("test");
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: NiceButton(
-                  padding: EdgeInsets.symmetric(vertical: 15),
-                  width: 350,
-                  elevation: 8.0,
-                  radius: 24,
-                  icon: (Icons.camera_alt),
-                  background: Pallete.studetGreen,
-                  text: "Your Vehicle",
-                  onPressed: () {
-                    print("test");
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 100),
-                child: NiceButton(
-                  padding: EdgeInsets.symmetric(vertical: 15),
-                  width: 350,
-                  elevation: 8.0,
-                  radius: 24,
-                  text: "Welcome to Scoop",
-                  background: null,
-                  gradientColors: [
-                    Pallete.studetGreen,
-                    Pallete.mainBlue,
-                  ],
-                  onPressed: () {
-                    print("test");
-                  },
                 ),
               ),
             ],

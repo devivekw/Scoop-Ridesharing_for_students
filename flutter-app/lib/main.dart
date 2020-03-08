@@ -3,6 +3,7 @@ import 'package:nice_button/nice_button.dart';
 
 import 'driver.dart';
 import 'data.dart';
+import 'student.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,6 +34,11 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            // FloatingActionButton(
+            //   onPressed: null,
+            //   backgroundColor: Colors.white,
+            //   elevation: 0,
+            // ),
             Padding(
               padding: const EdgeInsets.only(top: 180.0),
               child: Text(
@@ -72,7 +78,11 @@ class _HomePageState extends State<HomePage> {
                 text: "Are you a student?",
                 background: Pallete.studetGreen,
                 onPressed: () {
-                  print("hello");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => StudentSignUpPage()),
+                  );
                 },
               ),
             ),
