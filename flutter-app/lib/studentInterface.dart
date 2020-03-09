@@ -1,5 +1,6 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:nice_button/nice_button.dart';
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 
 import 'data.dart';
@@ -219,6 +220,24 @@ class _StudentSelectPageState extends State<StudentSelectPage> {
               DateTime.now(),
               onDateChange: (date) {
                 print(date.day.toString());
+              },
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(8),
+            child: NiceButton(
+              padding: EdgeInsets.symmetric(vertical: 15),
+              width: 350,
+              elevation: 8.0,
+              radius: 24,
+              text: "Ready to Scoop",
+              background: null,
+              gradientColors: [
+                Pallete.studetGreen,
+                Pallete.mainBlue,
+              ],
+              onPressed: () {
+                print("$_pickUpValue  $_dropOffValue");
               },
             ),
           ),
